@@ -1,0 +1,69 @@
+{
+  "network": {
+    "httpPort": 8081,
+    "p2pPort": 6000,
+    "discoveryDNS": "veritas.xpert0.in",
+    "ipDiscovery": true,
+    "subnet": "192.168.1.0/24"
+  },
+  "security": {
+    "hashAlgorithm": "sha512",
+    "encryption": "aes-256-gcm",
+    "asymmetric": "ed25519",
+    "tokenLength": 64
+  },
+  "identity": {
+    "lifecycle": {
+      "guardianAge": 5,
+      "selfAge": 18,
+      "deceasedGraceYears": 3
+    },
+    "maxKeyRotations": 5
+  },
+  "consensus": {
+    "mode": "APoC",
+    "KeyRegistry": [
+      "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEANpCGY1tLCSCTmwn0rn4KpKW0NlPP944GLzRrW0hdzOA=\n-----END PUBLIC KEY-----\n",
+	  "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAskUPSms+BCok+l7e7GsMnP3YIfLjaV0GjxY6ETXH+C4=\n-----END PUBLIC KEY-----\n",
+      "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAxgOy/iqzTJGKDrMb+VdO4/dZNjUGfcNGz9IlZav94Z4=\n-----END PUBLIC KEY-----\n",
+      "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAAu+Uvkdf8vOV+A+z2re3CUdlWp5U4JgjYj5upANAonY=\n-----END PUBLIC KEY-----\n"
+    ],
+    "requiredSignatures": {
+      "registration": 2,
+      "update": 3
+    }
+  },
+  "blockTemplate": {
+    "data": {
+      "name": "",
+      "dob": "",
+      "address": "",
+      "bloodGroup": "",
+      "fatherName": "",
+      "motherName": ""
+    },
+    "tokens": {},
+    "metadata": {
+      "createdAt": 0,
+      "updatedAt": 0,
+      "ownerPubKey": "",
+      "lifecycleStage": "genesis",
+      "deathDate": null,
+      "rotationsLeft": 5
+    }
+  },
+  "genesisTemplate": {
+    "chainId": "",
+    "createdAt": 0,
+    "masterPubKey": "",
+    "chainSignature": ""
+  },
+  "storage": {
+    "snapshotIntervalSeconds": 300,
+    "path": "./zkic_chain"
+  },
+  "protocol": {
+    "internalSegmentSize": 2,
+    "internalOffsetBounds": 16
+  }
+}
